@@ -17,9 +17,7 @@ public class CalculateResult {
         lottoMachine.generateLotto();
         this.lottoNumbers = lottoMachine.getLottoNumbers();
         System.out.println(" ============== ");
-        System.out.println(lottoNumbers);
         this.answer = lottoMachine.getAnswer();
-        System.out.println(answer);
     }
 
     void calculate(){
@@ -33,7 +31,7 @@ public class CalculateResult {
                 if(j==6 && count==4) result[3]++;
                 else if(answer.contains(number.get(j))) count++;
             }
-            System.out.println(count);
+            System.out.print(count);
             if(count == 3) result[0]++;
             else if(count == 4) result[1]++;
             else if(count == 5) result[2]++;
@@ -46,12 +44,12 @@ public class CalculateResult {
 
     void printResult(){
         System.out.println("\n당첨 통계\n---");
-        System.out.println("3개 일치 (5,000원) -" + result[0] +"개");
-        System.out.println("4개 일치 (50,000원) -" + result[1] +"개");
-        System.out.println("5개 일치 (1,500,000원) -" + result[2]  +"개");
-        System.out.println("5개 일치, 보너스 볼 일치 (30,000,000원) -" + result[3] +"개");
-        System.out.println("6개 일치 (2,000,000,000원) -" + result[4] +"개");
-        System.out.printf("총 수익률은" + "%.1f" +" %%입니다.", rate);
+        System.out.println("3개 일치 (5,000원) - " + result[0] +"개");
+        System.out.println("4개 일치 (50,000원) - " + result[1] +"개");
+        System.out.println("5개 일치 (1,500,000원) - " + result[2]  +"개");
+        System.out.println("5개 일치, 보너스 볼 일치 (30,000,000원) - " + result[3] +"개");
+        System.out.println("6개 일치 (2,000,000,000원) - " + result[4] +"개");
+        System.out.printf("총 수익률은" + "%.1f" +" %% 입니다.", rate);
 
     }
 

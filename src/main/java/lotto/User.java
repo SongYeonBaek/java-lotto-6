@@ -14,7 +14,6 @@ public class User {
 
     public int amount;
 
-
     public List<Integer> answer = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -28,13 +27,16 @@ public class User {
 
     void inputAnswer(){
         System.out.println("당첨 번호를 입력해 주세요.");
-        String[] str = sc.nextLine().split(",");
-
-        for (int i = 0; i < str.length; i++) {
-            int a = sc.nextInt();
-
-            answer.add(i, Integer.parseInt(str[i]));
+//        String[] str = sc.nextLine().split(",");
+        for (int i = 0; i < 6; i++) {
+            int j = sc.nextInt();
+            answer.add(j);
         }
+
+//        for (int i = 0; i < str.length; i++) {
+////            answer.add(i, Integer.parseInt(str[i]));
+//        }
+
         System.out.println("보너스 번호를 입력해 주세요.");
         answer.add(sc.nextInt());
     }
